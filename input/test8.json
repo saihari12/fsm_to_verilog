@@ -1,0 +1,51 @@
+{
+  "states": [
+    "SAFE",
+    "WARN",
+    "ALARM"
+  ],
+  "inputs": [
+    "sensor"
+  ],
+  "outputs": [
+    "siren"
+  ],
+  "transitions": [
+    {
+      "from": "SAFE",
+      "input": "0",
+      "to": "SAFE",
+      "output": "0"
+    },
+    {
+      "from": "SAFE",
+      "input": "1",
+      "to": "WARN",
+      "output": "0"
+    },
+    {
+      "from": "WARN",
+      "input": "0",
+      "to": "SAFE",
+      "output": "0"
+    },
+    {
+      "from": "WARN",
+      "input": "1",
+      "to": "ALARM",
+      "output": "1"
+    },
+    {
+      "from": "ALARM",
+      "input": "0",
+      "to": "WARN",
+      "output": "1"
+    },
+    {
+      "from": "ALARM",
+      "input": "1",
+      "to": "ALARM",
+      "output": "1"
+    }
+  ]
+}

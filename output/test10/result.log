@@ -1,0 +1,3 @@
+VCD info: dumpfile testbench.vcd opened for output.
+PASS
+testbench.v:635: $finish called at 520 (1s)

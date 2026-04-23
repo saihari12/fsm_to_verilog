@@ -1,0 +1,51 @@
+{
+  "states": [
+    "IDLE",
+    "COIN1",
+    "VEND"
+  ],
+  "inputs": [
+    "coin"
+  ],
+  "outputs": [
+    "dispense"
+  ],
+  "transitions": [
+    {
+      "from": "IDLE",
+      "input": "0",
+      "to": "IDLE",
+      "output": "0"
+    },
+    {
+      "from": "IDLE",
+      "input": "1",
+      "to": "COIN1",
+      "output": "0"
+    },
+    {
+      "from": "COIN1",
+      "input": "0",
+      "to": "COIN1",
+      "output": "0"
+    },
+    {
+      "from": "COIN1",
+      "input": "1",
+      "to": "VEND",
+      "output": "1"
+    },
+    {
+      "from": "VEND",
+      "input": "0",
+      "to": "IDLE",
+      "output": "0"
+    },
+    {
+      "from": "VEND",
+      "input": "1",
+      "to": "COIN1",
+      "output": "0"
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "states": [
+    "GNT_NONE",
+    "GNT_A",
+    "GNT_B"
+  ],
+  "inputs": [
+    "reqA",
+    "reqB"
+  ],
+  "outputs": [
+    "ackA",
+    "ackB"
+  ],
+  "transitions": [
+    {
+      "from": "GNT_NONE",
+      "input": "00",
+      "to": "GNT_NONE",
+      "output": "00"
+    },
+    {
+      "from": "GNT_NONE",
+      "input": "01",
+      "to": "GNT_B",
+      "output": "01"
+    },
+    {
+      "from": "GNT_NONE",
+      "input": "10",
+      "to": "GNT_A",
+      "output": "10"
+    },
+    {
+      "from": "GNT_NONE",
+      "input": "11",
+      "to": "GNT_A",
+      "output": "10"
+    },
+    {
+      "from": "GNT_A",
+      "input": "00",
+      "to": "GNT_NONE",
+      "output": "00"
+    },
+    {
+      "from": "GNT_A",
+      "input": "01",
+      "to": "GNT_B",
+      "output": "01"
+    },
+    {
+      "from": "GNT_A",
+      "input": "10",
+      "to": "GNT_A",
+      "output": "10"
+    },
+    {
+      "from": "GNT_A",
+      "input": "11",
+      "to": "GNT_A",
+      "output": "10"
+    },
+    {
+      "from": "GNT_B",
+      "input": "00",
+      "to": "GNT_NONE",
+      "output": "00"
+    },
+    {
+      "from": "GNT_B",
+      "input": "01",
+      "to": "GNT_B",
+      "output": "01"
+    },
+    {
+      "from": "GNT_B",
+      "input": "10",
+      "to": "GNT_A",
+      "output": "10"
+    },
+    {
+      "from": "GNT_B",
+      "input": "11",
+      "to": "GNT_B",
+      "output": "01"
+    }
+  ]
+}

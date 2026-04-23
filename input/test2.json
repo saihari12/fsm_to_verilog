@@ -1,0 +1,64 @@
+{
+  "states": [
+    "S_INIT",
+    "S_1",
+    "S_10",
+    "S_101"
+  ],
+  "inputs": [
+    "x"
+  ],
+  "outputs": [
+    "z"
+  ],
+  "transitions": [
+    {
+      "from": "S_INIT",
+      "input": "0",
+      "to": "S_INIT",
+      "output": "0"
+    },
+    {
+      "from": "S_INIT",
+      "input": "1",
+      "to": "S_1",
+      "output": "0"
+    },
+    {
+      "from": "S_1",
+      "input": "0",
+      "to": "S_10",
+      "output": "0"
+    },
+    {
+      "from": "S_1",
+      "input": "1",
+      "to": "S_1",
+      "output": "0"
+    },
+    {
+      "from": "S_10",
+      "input": "0",
+      "to": "S_INIT",
+      "output": "0"
+    },
+    {
+      "from": "S_10",
+      "input": "1",
+      "to": "S_101",
+      "output": "1"
+    },
+    {
+      "from": "S_101",
+      "input": "0",
+      "to": "S_10",
+      "output": "0"
+    },
+    {
+      "from": "S_101",
+      "input": "1",
+      "to": "S_1",
+      "output": "0"
+    }
+  ]
+}

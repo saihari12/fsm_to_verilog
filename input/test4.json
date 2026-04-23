@@ -1,0 +1,65 @@
+{
+  "states": [
+    "C0",
+    "C1",
+    "C2",
+    "C3"
+  ],
+  "inputs": [
+    "en"
+  ],
+  "outputs": [
+    "q1",
+    "q0"
+  ],
+  "transitions": [
+    {
+      "from": "C0",
+      "input": "0",
+      "to": "C0",
+      "output": "00"
+    },
+    {
+      "from": "C0",
+      "input": "1",
+      "to": "C1",
+      "output": "01"
+    },
+    {
+      "from": "C1",
+      "input": "0",
+      "to": "C1",
+      "output": "01"
+    },
+    {
+      "from": "C1",
+      "input": "1",
+      "to": "C2",
+      "output": "10"
+    },
+    {
+      "from": "C2",
+      "input": "0",
+      "to": "C2",
+      "output": "10"
+    },
+    {
+      "from": "C2",
+      "input": "1",
+      "to": "C3",
+      "output": "11"
+    },
+    {
+      "from": "C3",
+      "input": "0",
+      "to": "C3",
+      "output": "11"
+    },
+    {
+      "from": "C3",
+      "input": "1",
+      "to": "C0",
+      "output": "00"
+    }
+  ]
+}

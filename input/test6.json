@@ -1,0 +1,38 @@
+{
+  "states": [
+    "S_A",
+    "S_B"
+  ],
+  "inputs": [
+    "toggle"
+  ],
+  "outputs": [
+    "out"
+  ],
+  "transitions": [
+    {
+      "from": "S_A",
+      "input": "0",
+      "to": "S_A",
+      "output": "0"
+    },
+    {
+      "from": "S_A",
+      "input": "1",
+      "to": "S_B",
+      "output": "1"
+    },
+    {
+      "from": "S_B",
+      "input": "0",
+      "to": "S_B",
+      "output": "1"
+    },
+    {
+      "from": "S_B",
+      "input": "1",
+      "to": "S_A",
+      "output": "0"
+    }
+  ]
+}

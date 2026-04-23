@@ -1,0 +1,38 @@
+{
+  "states": [
+    "EVEN",
+    "ODD"
+  ],
+  "inputs": [
+    "x"
+  ],
+  "outputs": [
+    "is_even"
+  ],
+  "transitions": [
+    {
+      "from": "EVEN",
+      "input": "0",
+      "to": "EVEN",
+      "output": "1"
+    },
+    {
+      "from": "EVEN",
+      "input": "1",
+      "to": "ODD",
+      "output": "0"
+    },
+    {
+      "from": "ODD",
+      "input": "0",
+      "to": "ODD",
+      "output": "0"
+    },
+    {
+      "from": "ODD",
+      "input": "1",
+      "to": "EVEN",
+      "output": "1"
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "states": [
+    "IDLE",
+    "OP1",
+    "OP2",
+    "OP3"
+  ],
+  "inputs": [
+    "in1",
+    "in0"
+  ],
+  "outputs": [
+    "o1",
+    "o0"
+  ],
+  "transitions": [
+    {
+      "from": "IDLE",
+      "input": "00",
+      "to": "IDLE",
+      "output": "00"
+    },
+    {
+      "from": "IDLE",
+      "input": "01",
+      "to": "OP1",
+      "output": "01"
+    },
+    {
+      "from": "IDLE",
+      "input": "10",
+      "to": "OP2",
+      "output": "10"
+    },
+    {
+      "from": "IDLE",
+      "input": "11",
+      "to": "OP3",
+      "output": "11"
+    },
+    {
+      "from": "OP1",
+      "input": "00",
+      "to": "IDLE",
+      "output": "00"
+    },
+    {
+      "from": "OP1",
+      "input": "01",
+      "to": "OP1",
+      "output": "01"
+    },
+    {
+      "from": "OP1",
+      "input": "10",
+      "to": "OP2",
+      "output": "10"
+    },
+    {
+      "from": "OP1",
+      "input": "11",
+      "to": "OP3",
+      "output": "11"
+    },
+    {
+      "from": "OP2",
+      "input": "00",
+      "to": "IDLE",
+      "output": "00"
+    },
+    {
+      "from": "OP2",
+      "input": "01",
+      "to": "OP1",
+      "output": "01"
+    },
+    {
+      "from": "OP2",
+      "input": "10",
+      "to": "OP2",
+      "output": "10"
+    },
+    {
+      "from": "OP2",
+      "input": "11",
+      "to": "OP3",
+      "output": "11"
+    },
+    {
+      "from": "OP3",
+      "input": "00",
+      "to": "IDLE",
+      "output": "00"
+    },
+    {
+      "from": "OP3",
+      "input": "01",
+      "to": "OP1",
+      "output": "01"
+    },
+    {
+      "from": "OP3",
+      "input": "10",
+      "to": "OP2",
+      "output": "10"
+    },
+    {
+      "from": "OP3",
+      "input": "11",
+      "to": "OP3",
+      "output": "11"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "states": [
+    "RED",
+    "GREEN",
+    "YELLOW"
+  ],
+  "inputs": [
+    "timer_done"
+  ],
+  "outputs": [
+    "r",
+    "g",
+    "y"
+  ],
+  "transitions": [
+    {
+      "from": "RED",
+      "input": "0",
+      "to": "RED",
+      "output": "100"
+    },
+    {
+      "from": "RED",
+      "input": "1",
+      "to": "GREEN",
+      "output": "010"
+    },
+    {
+      "from": "GREEN",
+      "input": "0",
+      "to": "GREEN",
+      "output": "010"
+    },
+    {
+      "from": "GREEN",
+      "input": "1",
+      "to": "YELLOW",
+      "output": "001"
+    },
+    {
+      "from": "YELLOW",
+      "input": "0",
+      "to": "YELLOW",
+      "output": "001"
+    },
+    {
+      "from": "YELLOW",
+      "input": "1",
+      "to": "RED",
+      "output": "100"
+    }
+  ]
+}

@@ -22,13 +22,13 @@ A complete design automation pipeline that converts a Finite State Machine (FSM)
 ## UI Preview
 
 ### Input & Preview
-![Input UI](./assets/input.png)
+![Input UI](./assets/1.png)
 
 ### Generated Verilog
-![Verilog Output](./assets/verilog.png)
+![Verilog Output](./assets/2.png)
 
 ### Generated Netlist
-![Netlist Output](./assets/netlist.png)
+![Netlist Output](./assets/3.png)
 
 ---
 

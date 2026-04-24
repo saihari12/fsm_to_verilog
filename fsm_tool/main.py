@@ -10,7 +10,13 @@ from src.verilog_gen import generate_verilog
 from src.testbench_gen import generate_testbench
 
 def main():
-    input_files = sorted(glob.glob("input/*.json"))
+    import sys
+    if len(sys.argv) > 1:
+        # If an argument is passed, only run that specific JSON file
+        input_files = [sys.argv[1]]
+    else:
+        input_files = sorted(glob.glob("input/*.json"))
+
     if not input_files:
         print("No input files found. Please populate 'input/' directory with JSONs.")
         return
